@@ -33,7 +33,7 @@ app.setErrorHandler((error, request, reply) => {
 })
 
 app.get('/', () => {
-  return { msg: 'qweqwe' }
+  return prisma.word.findMany()
 })
 
 

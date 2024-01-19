@@ -8,16 +8,16 @@ const api = app.server
 
 describe('Test', () => {
 
-  it('/ (GET)', async () => {
+  it.only('/ (GET)', async () => {
 
-    await request(api)
+    const res = await request(api)
       .get('/')
       .expect(200)
 
-    // console.log(res.body)
+    console.log(res.body)
   })
 
-  it.only('/ (POST)', async() => {
+  it('/ (POST)', async() => {
     const res = await request(api)
       .post('/')
       .send({word: 'agastado', meaning: 'Que está desgastado, aborrecido ou irritado.'})
