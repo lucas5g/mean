@@ -2,15 +2,21 @@
   "name": "mean",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "server": "tsx --watch --no-warnings backend/server.ts"
+    "test": "vitest",
+    "server":"tsx --watch --no-warnings src/api/main.ts"
+
   },
   "dependencies": {
     "@prisma/client": "5.8.1",
+    "fastify": "^4.25.2",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
@@ -26,20 +32,17 @@
     "@typescript-eslint/parser": "^6.19.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8.42.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8",
     "prettier": "^3.2.4",
     "prisma": "5.8.1",
     "supertest": "^6.3.4",
     "tailwindcss": "^3.3.0",
     "tsx": "^4.7.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^1.2.1"
   }
 }
