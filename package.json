@@ -11,8 +11,8 @@
     "start": "next start",
     "lint": "next lint --fix",
     "test": "vitest",
-    "server":"tsx --watch --no-warnings src/api/main.ts"
-
+    "server": "tsx --watch --no-warnings src/api/main.ts",
+    "build:server":"tsup src/api/main.ts"
   },
   "dependencies": {
     "@prisma/client": "5.8.1",
@@ -41,6 +41,7 @@
     "prisma": "5.8.1",
     "supertest": "^6.3.4",
     "tailwindcss": "^3.3.0",
+    "tsup": "^8.0.1",
     "tsx": "^4.7.0",
     "typescript": "^5",
     "vitest": "^1.2.1"
