@@ -13,9 +13,12 @@ export async function POST(req: Request) {
     })
     .parse(await req.json());
 
-  const word = await prisma.word.create({ data });
+  const word = await prisma.word.create({data})
 
-  return new Response(JSON.stringify(word), {
-    status: 201,
-  });
+  return  Response.json(word);
 }
+
+export async function DELETE(){
+  return {msg: 1}
+}
+
