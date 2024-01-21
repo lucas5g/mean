@@ -1,24 +1,33 @@
 import { prisma } from '@/libs/prisma';
-import { z } from 'zod';
+import { wordCreateSchema } from '@/utils/schemas';
 
 export async function GET() {
-  return Response.json(await prisma.word.findMany());
+  const data = await prisma.word.findMany({
+    orderBy: {
+      name: 'asc',
+    },
+  });
+  return Response.json(data);
 }
 
 export async function POST(req: Request) {
-  const data = z
-    .object({
-      name: z.string(),
-      meaning: z.string(),
-    })
-    .parse(await req.json());
+  try {
+    const data = wordCreateSchema.parse(await req.json());
 
-  const word = await prisma.word.create({data})
+    const word = await prisma.word.create({ data });
 
-  return  Response.json(word);
+    return Response.json(word);
+  } catch (error) {
+    console.log(error);
+    return new Response(
+      JSON.stringify({
+        message: 'Não foi possível registrar.',
+      }),
+      { status: 422 },
+    );
+  }
 }
 
-export async function DELETE(){
-  return {msg: 1}
+export async function DELETE() {
+  return { msg: 1 };
 }
-

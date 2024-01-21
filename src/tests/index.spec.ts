@@ -30,6 +30,4 @@ describe('Test', () => {
 
     deleteId(res.body.id);
   }, 5000);
-
-
 });

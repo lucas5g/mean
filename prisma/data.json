@@ -1,10 +1,50 @@
 [
   {
-    "name":"agastado",
-    "meaning":"Que está desgastado, aborrecido ou irritado."
+    "name": "agastado",
+    "meaning": "Que está desgastado, aborrecido ou irritado."
   },
   {
-    "name":"corando",
-    "meaning":"Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção."
+    "name": "corando",
+    "meaning": "Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção."
+  },
+  {
+    "name": "afroditeu",
+    "meaning": "Referente a Afrodite, a deusa grega do amor e da beleza."
+  },
+  {
+    "name": "sândalo",
+    "meaning": "Uma madeira aromática, muitas vezes usada na produção de perfumes e incensos."
+  },
+  {
+    "name": "cânfora",
+    "meaning": "Substância cristalina branca com odor característico, extraída de algumas árvores e usada em produtos medicinais e perfumes."
+  },
+  {
+    "name": "tomilho",
+    "meaning": "Planta herbácea, aromática e condimentar, frequentemente utilizada na culinária."
+  },
+  {
+    "name": "languidez",
+    "meaning": "Estado de fraqueza, fadiga ou falta de energia; também pode se referir a uma expressão de suavidade e ternura."
+  },
+  {
+    "name": "anelantes",
+    "meaning": "Que anseia ou deseja ardentemente."
+  },
+  {
+    "name": "estereocópicas",
+    "meaning": "Relativo a imagens ou visão estereoscópica, que cria a ilusão de profundidade tridimensional."
+  },
+  {
+    "name": "almíscar",
+    "meaning": "Substância odorífera, geralmente extraída de glândulas de animais, usada em perfumaria."
+  },
+  {
+    "name": "erógenas",
+    "meaning": "Referente a zonas do corpo que são particularmente sensíveis e podem causar excitação sexual quando estimuladas."
+  },
+  {
+    "name": "galvânico",
+    "meaning": "Relativo a eletricidade ou corrente elétrica, especialmente corrente contínua produzida por uma pilha ou bateria."
   }
 ]

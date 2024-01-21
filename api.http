@@ -1,14 +1,14 @@
 ###
-GET http://localhost:8000
+GET http://localhost:3000/api
 
 ###
 POST http://localhost:3000/api
 content-type: application/json
 
 {
-  "name":"test-1",
+  "name":"test-2",
   "meaning":"test"
 }
 
 ###
-DELETE  http://localhost:3000/api/id
+DELETE  http://localhost:3000/api/a4b18b5b-926f-450d-bf1f-fdc42c0fd690
