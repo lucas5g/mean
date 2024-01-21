@@ -27,7 +27,3 @@ export async function POST(req: Request) {
     );
   }
 }
-
-export async function DELETE() {
-  return { msg: 1 };
-}

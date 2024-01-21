@@ -1,11 +1,11 @@
 'use client';
 
-import { WordCreateType } from '@/utils/schemas';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { CreateWordType } from '@/utils/schemas';
 
 interface Props {
-  words: WordCreateType[];
+  words: CreateWordType[];
 }
 
 export function List(props: Props) {
