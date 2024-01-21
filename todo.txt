@@ -1,1 +1,2 @@
 1 - auto import single cotas
+2 - words fixed front/back
