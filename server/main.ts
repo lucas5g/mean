@@ -73,7 +73,7 @@ app.delete('/:id', async (request, reply) => {
 
 app
   .listen({
-    port: Number(process.env.PORT) || 8000,
+    port:  8000,
     host: '0.0.0.0',
   })
   .then(() => console.log('\n💻 HTTP server running!'))
