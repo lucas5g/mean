@@ -1,4 +1,20 @@
-import { prisma } from '@/libs/prisma';
+import { prisma } from '@/utils/prisma';
+import { updateWordSchema } from '@/utils/schemas';
+
+export async function PATCH(
+  req: Request,
+  { params }: { params: { id: string } },
+) {
+  const data = updateWordSchema.parse(await req.json());
+
+  const word = await prisma.word.update({
+    where: {
+      id: params.id,
+    },
+    data,
+  });
+  return Response.json(word);
+}
 
 export async function DELETE(
   req: Request,

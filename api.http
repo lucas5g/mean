@@ -6,9 +6,20 @@ POST http://localhost:3000/api
 content-type: application/json
 
 {
-  "name":"test-2",
-  "meaning":"test"
+  "name":"test-3",
+  "meaning":"test",
+  "fixed":false
 }
 
 ###
-DELETE  http://localhost:3000/api/a4b18b5b-926f-450d-bf1f-fdc42c0fd690
+PATCH  http://localhost:3000/api/dcbaf064-da80-4b99-b414-3e96c8b8d49e
+content-type: application/json
+
+{
+  "fixed":true
+}
+
+
+
+###
+DELETE  http://localhost:3000/api/dcbaf064-da80-4b99-b414-3e96c8b8d49e

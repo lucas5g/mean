@@ -1,9 +1,12 @@
 import { z } from 'zod';
 
-export const wordCreateSchema = z.object({
+export const createWordSchema = z.object({
   id: z.string().uuid().optional(),
   name: z.string(),
   meaning: z.string(),
+  fixed: z.boolean(),
 });
 
-export type WordCreateType = z.infer<typeof wordCreateSchema>;
+export const updateWordSchema = createWordSchema.partial();
+
+export type CreateWordType = z.infer<typeof createWordSchema>;

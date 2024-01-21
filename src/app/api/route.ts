@@ -1,5 +1,5 @@
-import { prisma } from '@/libs/prisma';
-import { wordCreateSchema } from '@/utils/schemas';
+import { prisma } from '@/utils/prisma';
+import { createWordSchema } from '@/utils/schemas';
 
 export async function GET() {
   const data = await prisma.word.findMany({
@@ -12,7 +12,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const data = wordCreateSchema.parse(await req.json());
+    const data = createWordSchema.parse(await req.json());
 
     const word = await prisma.word.create({ data });
 

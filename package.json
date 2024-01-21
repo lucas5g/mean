@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "dependencies": {
     "@prisma/client": "5.8.1",

@@ -1,11 +1,25 @@
-import { describe, expect, it } from 'vitest';
+import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import request from 'supertest';
+import { CreateWordType } from '@/utils/schemas';
 const api = 'http://localhost:3000';
 
 describe('Test', () => {
-  const deleteId = async (id: string) => {
-    await request(api).delete('/api'.concat(id)).expect(204);
-  };
+  let id: string;
+
+  beforeAll(async () => {
+    const payload: CreateWordType = {
+      name: 'name-'.concat(new Date().valueOf().toString()),
+      meaning: 'algum significado-'.concat(new Date().getMinutes().toString()),
+      fixed: false,
+    };
+
+    const res = await request(api).post('/api').send(payload);
+
+    expect(res.body).toMatchObject(payload);
+    expect(res.status).equal(200);
+
+    id = res.body.id;
+  });
 
   it('/ (GET)', async () => {
     const res = await request(api).get('/api').expect(200);
@@ -17,17 +31,15 @@ describe('Test', () => {
     });
   });
 
-  it.only('/ (POST)', async () => {
-    const payload = {
-      name: 'name-'.concat(new Date().valueOf().toString()),
-      meaning: 'algum significado-'.concat(new Date().getMinutes().toString()),
-    };
+  it('/:id (PATCH)', async () => {
+    const res = await request(api)
+      .patch('/api/'.concat(id))
+      .send({ fixed: true });
 
-    const res = await request(api).post('/api').send(payload);
+    expect(res.body.fixed).equal(true);
+  });
 
-    expect(res.body).toMatchObject(payload);
-    expect(res.status).equal(200);
-
-    deleteId(res.body.id);
-  }, 5000);
+  afterAll(async () => {
+    await request(api).delete('/api/'.concat(id)).expect(204);
+  });
 });

@@ -1,50 +1,62 @@
 [
   {
     "name": "agastado",
-    "meaning": "Que está desgastado, aborrecido ou irritado."
+    "meaning": "Que está desgastado, aborrecido ou irritado.",
+    "fixed": false
   },
   {
     "name": "corando",
-    "meaning": "Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção."
+    "meaning": "Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção.",
+    "fixed": false
   },
   {
     "name": "afroditeu",
-    "meaning": "Referente a Afrodite, a deusa grega do amor e da beleza."
+    "meaning": "Referente a Afrodite, a deusa grega do amor e da beleza.",
+    "fixed": false
   },
   {
     "name": "sândalo",
-    "meaning": "Uma madeira aromática, muitas vezes usada na produção de perfumes e incensos."
+    "meaning": "Uma madeira aromática, muitas vezes usada na produção de perfumes e incensos.",
+    "fixed": false
   },
   {
     "name": "cânfora",
-    "meaning": "Substância cristalina branca com odor característico, extraída de algumas árvores e usada em produtos medicinais e perfumes."
+    "meaning": "Substância cristalina branca com odor característico, extraída de algumas árvores e usada em produtos medicinais e perfumes.",
+    "fixed": false
   },
   {
     "name": "tomilho",
-    "meaning": "Planta herbácea, aromática e condimentar, frequentemente utilizada na culinária."
+    "meaning": "Planta herbácea, aromática e condimentar, frequentemente utilizada na culinária.",
+    "fixed": false
   },
   {
     "name": "languidez",
-    "meaning": "Estado de fraqueza, fadiga ou falta de energia; também pode se referir a uma expressão de suavidade e ternura."
+    "meaning": "Estado de fraqueza, fadiga ou falta de energia; também pode se referir a uma expressão de suavidade e ternura.",
+    "fixed": false
   },
   {
     "name": "anelantes",
-    "meaning": "Que anseia ou deseja ardentemente."
+    "meaning": "Que anseia ou deseja ardentemente.",
+    "fixed": false
   },
   {
     "name": "estereocópicas",
-    "meaning": "Relativo a imagens ou visão estereoscópica, que cria a ilusão de profundidade tridimensional."
+    "meaning": "Relativo a imagens ou visão estereoscópica, que cria a ilusão de profundidade tridimensional.",
+    "fixed": false
   },
   {
     "name": "almíscar",
-    "meaning": "Substância odorífera, geralmente extraída de glândulas de animais, usada em perfumaria."
+    "meaning": "Substância odorífera, geralmente extraída de glândulas de animais, usada em perfumaria.",
+    "fixed": false
   },
   {
     "name": "erógenas",
-    "meaning": "Referente a zonas do corpo que são particularmente sensíveis e podem causar excitação sexual quando estimuladas."
+    "meaning": "Referente a zonas do corpo que são particularmente sensíveis e podem causar excitação sexual quando estimuladas.",
+    "fixed": false
   },
   {
     "name": "galvânico",
-    "meaning": "Relativo a eletricidade ou corrente elétrica, especialmente corrente contínua produzida por uma pilha ou bateria."
+    "meaning": "Relativo a eletricidade ou corrente elétrica, especialmente corrente contínua produzida por uma pilha ou bateria.",
+    "fixed": false
   }
 ]

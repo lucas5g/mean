@@ -1,6 +1,4 @@
 import { List } from '@/components/List';
-import { Input } from '@/components/input';
-import { WordCreateType } from '@/utils/schemas';
 
 export default async function Home() {
   const res = await fetch('http://localhost:3000/api', {
