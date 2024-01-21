@@ -5,21 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && tsup server/main.ts && npx prisma generate",
+    "build": "tsc && vite build && tsup server/server.ts && npx prisma generate",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start":"node dist/main.cjs"
+    "start": "node dist/server.cjs"
   },
   "dependencies": {
     "@prisma/client": "5.8.1",
     "axios": "^1.6.5",
     "clsx": "^2.1.0",
+    "express": "^4.18.2",
     "fastify": "^4.25.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
