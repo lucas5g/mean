@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import clsx from 'clsx';
 import { CreateWordType } from '@/utils/schemas';
+import { CheckCircle } from 'lucide-react';
 
 interface Props {
   words: CreateWordType[];
@@ -12,7 +13,6 @@ export function List(props: Props) {
   const [words, setWords] = useState(props.words);
   const [fixeds, setFixeds] = useState<string[]>([]);
 
-  console.log(fixeds);
   return (
     <>
       <input
@@ -38,7 +38,7 @@ export function List(props: Props) {
 
       <ul
         className={clsx(
-          'grid grid-cols-3 lg:grid-cols-5 border rounded-xl bg-gray-700',
+          'grid grid-cols-3 lg:grid-cols-5 gap-2',
           {
             'grid-cols-1': words.length === 1,
             'grid-cols-2 lg:grid-cols-2': words.length === 2,
@@ -49,13 +49,22 @@ export function List(props: Props) {
           return (
             <li
               key={word.id}
-              className="p-5 hover:cursor-pointer"
+              // className={clsx(
+              //   'p-3 hover:cursor-pointer border rounded-xl overflow-hidden'
+              // , {
+              //   // 'bg-gray-600': word.fixed
+
+              // }) }
               onClick={() => {
                 setFixeds([...fixeds, word.id!]);
               }}
             >
-              <strong className="pr-2">{word.name.toUpperCase()}:</strong>
-              {word.meaning}
+              <strong className="pr-2">{word.name.toUpperCase()}</strong>
+              <div>
+                {word.meaning}
+
+              </div>
+
             </li>
           );
         })}
