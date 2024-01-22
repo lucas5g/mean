@@ -12,7 +12,7 @@ app.get('/', async (_, res) => {
 
 app.get('/:id', async (req, res) => {
   res.json(
-    await prisma.word.findFirstOrThrow({
+    await prisma.word.findFirst({
       where: {
         id: req.params.id,
       },
@@ -50,7 +50,7 @@ app.use((error: Error, _: Request, res: Response) => {
   if (error instanceof PrismaClientKnownRequestError) {
     console.log('erro prisma');
   }
-  res.json({ msg: 'qweqwew' });
+  res.json({ msg: 'Erro app' });
 });
 
 app.listen(8000, () => console.log('💻 HTTP SERVER RUNNING!'));
