@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx --watch --no-warnings server.ts",
+    "dev": "tsx --watch --no-warnings index.ts",
     "build": "tsup src && prisma generate",
-    "start":"node dist/server.js"
+    "start":"node dist/index.js"
   },
   "keywords": [],
   "author": "",
