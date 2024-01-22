@@ -1,11 +1,23 @@
 import fastify from 'fastify'
-import { PrismaClient } from '@prisma/client'
-const app = fastify()
+import { prisma } from './prisma';
+import { number, z } from 'zod'
+export const app = fastify()
 
 app.get('/api', async () => {
-  const prisma = new PrismaClient()
   return await prisma.word.findMany();
 });
+
+app.get('/api/:id', async (req) => {
+
+  const { id } = z.object({
+    id: z.coerce.number()
+  }).parse(req.params)
+
+  return await prisma.word.findFirst({
+    where: { id }
+  })
+})
+
 
 // app.delete('/:id', async (req, res) => {
 //   const prisma = new PrismaClient()
@@ -20,6 +32,10 @@ app.get('/api', async () => {
 //     }),
 //   );
 // });
+
+app.listen({
+  port: 8000
+})
 
 export default async (req: Request, res: Response) => {
   await app.ready();
