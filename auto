@@ -1,0 +1,35 @@
+#!/bin/bash
+
+cd server && npx tsup src 
+vercel
+
+# message=$1
+
+# npm run lint 
+# status=$?
+
+# if [ "$status" != 0 ]; then 
+#   echo -e "Erro no lint"
+#   exit $status
+# fi
+
+# npm test
+# status=$?
+
+# npm run build
+# status=$?
+
+# if [ "$status" != 0 ]; then 
+#   echo -e "Erro no build"
+#   exit $status
+# fi
+
+# if [ "$status" != 0 ]; then 
+#   echo -e "Erro nos tests"
+#   exit $status
+# fi
+
+# git add .
+# git commit -m "$message"
+# git push
+

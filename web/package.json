@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && tsup src/server.ts && npx prisma generate",
+    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
-    "start": "node dist/server.cjs",
-    "server": "tsx --watch --no-warnings src/server.ts"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "5.8.1",
