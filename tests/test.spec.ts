@@ -1,14 +1,13 @@
-import { beforeAll, describe, expect, it } from 'vitest'
+import {  describe, expect, it } from 'vitest'
 import request from 'supertest'
 
-const api = 'https://means.vercel.app'
-// const api = 'http://localhost:8000'
+// const api = 'https://means.vercel.app'
+const api = 'http://localhost:8000'
+
+let id:string
 
 describe('Test (E2e)', () => {
 
-  beforeAll(async () => {
-
-  })
 
   it('find all', async () => {
 
@@ -26,4 +25,24 @@ describe('Test (E2e)', () => {
       expect(res.body).toHaveProperty(property)
     })
   })
+
+  it('create and delete', async() => {
+
+    const payload = {
+      name: 'test-1',
+      meaning: 'desc',
+      fixed: false
+    }
+
+    const res = await request(api)
+      .post('/api')
+      .send(payload)
+
+    expect(res.body).toMatchObject(payload)
+
+    await request(api)
+      .delete('/api/'.concat(res.body.id))
+      .expect(204)
+
+  }, 6000)
 })

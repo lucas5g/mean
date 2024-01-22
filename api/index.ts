@@ -21,20 +21,30 @@ app.get('/api/:id', async (req) => {
   })
 })
 
+app.post('/api', async (req, res) => {
+  const data = z.object({
+    name: z.string(),
+    meaning: z.string(),
+    fixed: z.boolean()
+  }).parse(req.body)
 
-// app.delete('/:id', async (req, res) => {
-//   const prisma = new PrismaClient()
+  return await prisma.word.create({
+    data
+  })
+})
 
-//   const { id } = req.params
 
-//   res.status(204).send(
-//     await prisma.word.delete({
-//       where: {
-//         id: String(req.params.id),
-//       },
-//     }),
-//   );
-// });
+app.delete('/api/:id', async (req, res) => {
+  const { id } = z.object({
+    id: z.coerce.number()
+  }).parse(req.params)
+
+  res.status(204).send(
+    await prisma.word.delete({
+      where: { id },
+    }),
+  );
+});
 
 app.listen({
   port: 8000
