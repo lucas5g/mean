@@ -7,6 +7,7 @@ import { prisma } from './utils/prisma';
 const app = express();
 
 app.get('/', async (_, res) => {
+  return res.json({ message: 'test api' });
   res.json(await prisma.word.findMany());
 });
 
