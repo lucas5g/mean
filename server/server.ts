@@ -2,12 +2,13 @@ import express, { Request, Response } from 'express';
 import 'express-async-errors';
 import { z } from 'zod';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
-import { prisma } from './utils/prisma';
+import { prisma } from '../web/src/utils/prisma';
 
 const app = express();
 
 app.get('/', async (_, res) => {
-  res.json(await prisma.word.findMany());
+  return res.json({message: 'minha api'})
+  // res.json(await prisma.word.findMany());
 });
 
 app.get('/:id', async (req, res) => {
