@@ -1,7 +1,10 @@
 import fastify from 'fastify'
-import { prisma } from './prisma';
-import { number, z } from 'zod'
+import { PrismaClient } from '@prisma/client'
+import { z } from 'zod'
 export const app = fastify()
+
+export const prisma = new PrismaClient()
+
 
 app.get('/api', async () => {
   return await prisma.word.findMany();

@@ -1,8 +1,8 @@
 import { beforeAll, describe, expect, it } from 'vitest'
 import request from 'supertest'
 
-// const api = 'https://means.vercel.app'
-const api = 'http://localhost:8000'
+const api = 'https://means.vercel.app'
+// const api = 'http://localhost:8000'
 
 describe('Test (E2e)', () => {
 
@@ -18,7 +18,7 @@ describe('Test (E2e)', () => {
     expect(res.body).length.greaterThan(0)
   }, 5000)
 
-  it.only('find one', async() => {
+  it('find one', async() => {
     const res = await request(api)
       .get('/api/1');
 
