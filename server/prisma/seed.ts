@@ -1,4 +1,4 @@
-import { prisma } from '../../web/src/utils/prisma';
+import { prisma } from '../src/utils/prisma';
 import words from './data.json';
 
 async function main() {
