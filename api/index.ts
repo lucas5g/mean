@@ -1,7 +1,10 @@
 import fastify from 'fastify'
 import { PrismaClient } from '@prisma/client'
 import { z } from 'zod'
+import cors from '@fastify/cors'
+
 export const app = fastify()
+app.register(cors)
 
 export const prisma = new PrismaClient()
 
@@ -48,7 +51,7 @@ app.delete('/api/:id', async (req, res) => {
 
 app.listen({
   port: 8000
-})
+}).then(() => console.log('http://localhost:8000/api'))
 
 export default async (req: Request, res: Response) => {
   await app.ready();

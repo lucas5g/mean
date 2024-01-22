@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
-import axios from 'axios';
+import { api } from './utils/axios';
+import { swr } from './utils/swr';
 
 interface WordInterface {
   id: string;
@@ -10,23 +11,20 @@ interface WordInterface {
 }
 
 export function App() {
-  const [words, setWords] = useState<WordInterface[]>();
   const [fixeds, setFixeds] = useState([] as string[]);
 
-  useEffect(() => {
+  const { data, error, isLoading} = swr('api')
 
-    axios.get('api').then((res) => setWords(res.data));
-  }, []);
-
-  if (words?.length === 0 || !words) {
-    return <h1>carregando..</h1>;
-  }
+  if(error) return <div>Erro ao carregar.</div>
+  if(isLoading) return <div>Carregando...</div>
+  
+  const words:WordInterface[] = data
 
   return (
-    <main>
+    <main className='h-screen p-10 space-y-8 text-white bg-gray-800'>
       <input
         placeholder="Type words"
-        className="w-full rounded-xl p-5 bg-gray-600 border text-white font-semibold placeholder:text-white"
+        className="w-full p-5 font-semibold text-white bg-gray-600 border rounded-xl placeholder:text-white"
         onChange={(event) => {
           const filter = event.target.value
             .toLowerCase()
@@ -41,7 +39,7 @@ export function App() {
             return wordFormat.includes(filter);
           });
 
-          setWords(filteredWords);
+          // setWords(filteredWords);
         }}
       />
 

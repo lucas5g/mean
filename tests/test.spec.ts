@@ -1,8 +1,8 @@
 import {  describe, expect, it } from 'vitest'
 import request from 'supertest'
 
-// const api = 'https://means.vercel.app'
-const api = 'http://localhost:8000'
+const api = 'https://means.vercel.app'
+// const api = 'http://localhost:8000'
 
 let id:string
 
