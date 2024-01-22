@@ -1,28 +1,25 @@
-import { useEffect, useState } from 'react'
-import clsx from 'clsx'
-import axios from 'axios'
+import { useEffect, useState } from 'react';
+import clsx from 'clsx';
+import axios from 'axios';
 
-interface WordInterface{
-  id: string 
-  name: string 
-  meaning: string 
-  fixed: boolean
+interface WordInterface {
+  id: string;
+  name: string;
+  meaning: string;
+  fixed: boolean;
 }
 
 export function App() {
-
   const [words, setWords] = useState<WordInterface[]>();
-  const [fixeds, setFixeds] = useState([] as string[])
+  const [fixeds, setFixeds] = useState([] as string[]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api')
-      .then( res => setWords(res.data)) 
-  }, [])
+    axios.get('http://localhost:3000/api').then((res) => setWords(res.data));
+  }, []);
 
-  if(words?.length === 0 || !words ){
-    return <h1>carregando..</h1>
+  if (words?.length === 0 || !words) {
+    return <h1>carregando..</h1>;
   }
-
 
   return (
     <main>
@@ -48,39 +45,29 @@ export function App() {
       />
 
       <ul
-        className={clsx(
-          'grid grid-cols-3 lg:grid-cols-5 gap-2',
-          {
-            'grid-cols-1': words.length === 1,
-            'grid-cols-2 lg:grid-cols-2': words.length === 2,
-          },
-        )}
+        className={clsx('grid grid-cols-3 lg:grid-cols-5 gap-2', {
+          'grid-cols-1': words.length === 1,
+          'grid-cols-2 lg:grid-cols-2': words.length === 2,
+        })}
       >
-        {words?.map((word) => {
+        {words.map((word) => {
           return (
-            <li
-              key={word.id}
-              className={clsx(
-                'p-3 hover:cursor-pointer border rounded-xl overflow-hidden'
-              , {
-                // 'bg-gray-600': word.fixed
-
-              }) }
-              onClick={() => {
-                setFixeds([...fixeds, word.id!]);
-              }}
-            >
-              <strong className="pr-2">{word.name.toUpperCase()}</strong>
-              <div>
-                {word.meaning}
-
-              </div>
-
+            <li key={word.id}>
+              <button
+                className={clsx('p-3  border rounded-xl overflow-hidden', {
+                  'bg-gray-600': word.fixed,
+                })}
+                onClick={() => {
+                  setFixeds([...fixeds, word.id]);
+                }}
+              >
+                <strong className="pr-2">{word.name.toUpperCase()}</strong>
+                <div>{word.meaning}</div>
+              </button>
             </li>
           );
         })}
       </ul>
     </main>
-  )
+  );
 }
-
