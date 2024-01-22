@@ -14,9 +14,8 @@ export function App() {
   const [fixeds, setFixeds] = useState([] as string[]);
 
   useEffect(() => {
-    const api = 'api'
 
-    axios.get(api).then((res) => setWords(res.data));
+    axios.get('api').then((res) => setWords(res.data));
   }, []);
 
   if (words?.length === 0 || !words) {
