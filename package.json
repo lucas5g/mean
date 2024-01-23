@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "concurrently  \"vite\" \"tsx --watch --no-warnings api/index.mjs\"",
-    "build": "tsc && vite build && npx tsup server",
+    "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
     "postinstall": "prisma generate",
