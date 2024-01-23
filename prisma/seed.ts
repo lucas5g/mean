@@ -1,5 +1,5 @@
 // import { prisma } from '../src/utils/prisma';
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 import { PrismaClient } from '@prisma/client';
 import words from './data.json';
 

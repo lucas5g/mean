@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { api } from './utils/axios';
-import { swr } from './utils/swr';
-
+import useSWR from 'swr';
 interface WordInterface {
   id: string;
   name: string;
@@ -11,34 +9,36 @@ interface WordInterface {
 }
 
 export function App() {
+  const fetch = async (url: string) => {
+    const { data } = await api.get(url);
+    return data;
+  };
+  const { data, error, isLoading, mutate } = useSWR(fetch('api'));
 
-  const { data, error, isLoading, mutate } = swr('api')
+  if (error) return <div>Erro ao carregar.</div>;
+  if (isLoading) return <div>Carregando...</div>;
 
-  if (error) return <div>Erro ao carregar.</div>
-  if (isLoading) return <div>Carregando...</div>
-
-  const words: WordInterface[] = data
+  const words: WordInterface[] = data;
 
   return (
-    <main className='min-h-screen p-10 space-y-8 text-white bg-gray-800'>
+    <main className="min-h-screen p-10 space-y-8 text-white bg-gray-800">
       <input
         placeholder="Type words"
         className="w-full p-5 font-semibold text-white bg-gray-600 border rounded-xl placeholder:text-white"
-        onChange={(event) => {
-          const filter = event.target.value
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '');
+        // onChange={(event) => {
+        //   const filter = event.target.value
+        //     .toLowerCase()
+        //     .normalize('NFD')
+        //     .replace(/[\u0300-\u036f]/g, '');
 
-          const filteredWords = words?.filter((word) => {
-            const wordFormat = word.name
-              .normalize('NFD')
-              .replace(/[\u0300-\u036f]/g, '');
+        //   words.filter((word) => {
+        //     const wordFormat = word.name
+        //       .normalize('NFD')
+        //       .replace(/[\u0300-\u036f]/g, '');
 
-            return wordFormat.includes(filter);
-          });
-
-        }}
+        //     return wordFormat.includes(filter);
+        //   });
+        // }}
       />
 
       <ul
@@ -56,16 +56,16 @@ export function App() {
               })}
               onClick={async () => {
                 await api.patch('api/'.concat(word.id), {
-                  fixed: !word.fixed
-                })
+                  fixed: !word.fixed,
+                });
 
-                const updateWords = words.map(row => {
+                const updateWords = words.map((row) => {
                   if (row.id === word.id) {
-                    row.fixed = !row.fixed
+                    row.fixed = !row.fixed;
                   }
-                  return row
-                })
-                mutate(updateWords)
+                  return row;
+                });
+                mutate(updateWords);
               }}
             >
               <strong className="pr-2">{word.name.toUpperCase()}</strong>

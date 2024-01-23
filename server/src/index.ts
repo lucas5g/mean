@@ -1,12 +1,11 @@
-import fastify from 'fastify'
-import cors from '@fastify/cors'
+import fastify from 'fastify';
+import cors from '@fastify/cors';
 // import { z } from 'zod';
 // import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 import { prisma } from './utils/prisma';
 
-
 const app = fastify();
-app.register(cors)
+app.register(cors);
 
 app.get('/api', async () => {
   return await prisma.word.findMany();
@@ -59,10 +58,9 @@ app.get('/api', async () => {
 //   port: 8000,
 //   host:'0.0.0.0'
 // }).then(() => console.log('Server run http://localhost:8000/api'))
-export default async (req:Request, res:Response) => {
+export default async (req: Request, res: Response) => {
   await app.ready();
   app.server.emit('request', req, res);
-}
-
+};
 
 // app.listen(8000, () => console.log('💻 HTTP SERVER RUNNING!'));
