@@ -7,8 +7,8 @@
     "seed": "tsx prisma/seed.ts"
   },
   "scripts": {
-    "dev": "concurrently  \"vite\" \"tsx --watch --no-warnings api/index.ts\"",
-    "build": "tsc && vite build",
+    "dev": "concurrently  \"vite\" \"tsx --watch --no-warnings api/index.cjs\"",
+    "build": "tsc && vite build && npx tsup server",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "preview": "vite preview",
     "postinstall": "prisma generate",
@@ -56,5 +56,8 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.2.1"
+  },
+  "tsup":{
+    "outDir":"api"
   }
 }
