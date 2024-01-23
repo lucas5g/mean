@@ -85,7 +85,7 @@ app.delete('/api/:id', async (req, res) => {
 
 app.setErrorHandler((error, req, res) => {
   console.log(error);
-  res.send({ msg: 'algum erro' });
+  res.status(500).send({ msg: 'algum erro' });
 });
 
 app

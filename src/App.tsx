@@ -9,17 +9,9 @@ interface WordInterface {
 }
 
 export function App() {
-  const uri =
-    location.host === 'localhost:5173'
-      ? 'http://localhost:8000/api'
-      : 'https://means.vercel.app/api';
-
-  const fetcher = (url: string) =>
-    fetch(url).then((res) => {
-      return res.json();
-    });
-
-  const { data, error, mutate } = useSWR(uri, fetcher);
+  const { data, error, mutate } = useSWR('api', async () => {
+    return (await api.get('api')).data;
+  });
 
   if (error) return <div>Erro ao carregar.</div>;
   if (!data) return <div>Carregando...</div>;
