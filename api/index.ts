@@ -10,7 +10,16 @@ export const prisma = new PrismaClient()
 
 
 app.get('/api', async () => {
-  return await prisma.word.findMany();
+  return await prisma.word.findMany({
+    orderBy:[
+      {
+        fixed:'desc'
+      },
+      {
+        name:'asc'
+      }
+    ]
+  });
 });
 
 app.get('/api/:id', async (req) => {
@@ -21,6 +30,23 @@ app.get('/api/:id', async (req) => {
 
   return await prisma.word.findFirst({
     where: { id }
+  })
+})
+
+app.patch('/api/:id', async (req, res) => {
+  const { id } = z.object({
+    id: z.coerce.number()
+  }).parse(req.params)
+
+  const data = z.object({
+    name: z.string(),
+    meaning: z.string(),
+    fixed: z.boolean()
+  }).partial().parse(req.body)
+
+  return await prisma.word.update({
+    where:{id},
+    data
   })
 })
 
@@ -48,6 +74,11 @@ app.delete('/api/:id', async (req, res) => {
     }),
   );
 });
+
+app.setErrorHandler((error, req, res) => {
+  console.log(error)
+  res.send({msg: 'algum erro'})
+})
 
 app.listen({
   port: 8000

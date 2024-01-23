@@ -11,9 +11,8 @@ interface WordInterface {
 }
 
 export function App() {
-  const [fixeds, setFixeds] = useState([] as string[]);
 
-  const { data, error, isLoading } = swr('api')
+  const { data, error, isLoading, mutate } = swr('api')
 
   if (error) return <div>Erro ao carregar.</div>
   if (isLoading) return <div>Carregando...</div>
@@ -39,7 +38,6 @@ export function App() {
             return wordFormat.includes(filter);
           });
 
-          // setWords(filteredWords);
         }}
       />
 
@@ -51,27 +49,28 @@ export function App() {
       >
         {words.map((word) => {
           return (
-            <button
+            <li
               key={word.id}
-              className={clsx('p-3  border rounded-xl ', {
+              className={clsx('p-2 border rounded-xl hover:cursor-pointer ', {
                 'bg-gray-600': word.fixed,
-              })}  >
-              <li
-                // className='h-30'
-              >
-                {/* <button
-                className={clsx('p-3  border rounded-xl overflow-hidden', {
-                  'bg-gray-600': word.fixed,
-                })}
-                onClick={() => {
-                  setFixeds([...fixeds, word.id]);
-                }}
-              > */}
-                <strong className="pr-2">{word.name.toUpperCase()}</strong>
-                <div>{word.meaning}</div>
-                {/* </button> */}
-              </li>
-            </button>
+              })}
+              onClick={async () => {
+                await api.patch('api/'.concat(word.id), {
+                  fixed: !word.fixed
+                })
+
+                const updateWords = words.map(row => {
+                  if (row.id === word.id) {
+                    row.fixed = !row.fixed
+                  }
+                  return row
+                })
+                mutate(updateWords)
+              }}
+            >
+              <strong className="pr-2">{word.name.toUpperCase()}</strong>
+              <div>{word.meaning}</div>
+            </li>
           );
         })}
       </ul>
