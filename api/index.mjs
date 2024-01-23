@@ -1,12 +1,10 @@
 import fastify from 'fastify';
-import { PrismaClient } from '@prisma/client';
 import { z } from 'zod';
 import cors from '@fastify/cors';
+import { prisma } from './prisma.mjs';
 
 export const app = fastify();
 app.register(cors);
-
-export const prisma = new PrismaClient();
 
 app.get('/api', async () => {
   return await prisma.word.findMany({
