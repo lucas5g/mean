@@ -6,3 +6,8 @@ export const createWordSchema = z.object({
   fixed: z.boolean()
 })
 
+export const updateWordSchema = createWordSchema.partial()
+
+export const paramsSchema = z.object({
+  id: z.coerce.number()
+})
