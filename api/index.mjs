@@ -94,7 +94,7 @@ app
   })
   .then(() => console.log('http://localhost:8000/api'));
 
-export default async (req: Request, res: Response) => {
+export default async (req, res) => {
   await app.ready();
   app.server.emit('request', req, res);
 };
