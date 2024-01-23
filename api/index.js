@@ -2,6 +2,7 @@ import fastify from 'fastify';
 import { z } from 'zod';
 import cors from '@fastify/cors';
 import { prisma } from './prisma.js';
+import { createWordSchema } from './schemas.js';
 
 export const app = fastify();
 app.register(cors);
@@ -54,13 +55,7 @@ app.patch('/api/:id', async (req) => {
 });
 
 app.post('/api', async (req) => {
-  const data = z
-    .object({
-      name: z.string(),
-      meaning: z.string(),
-      fixed: z.boolean(),
-    })
-    .parse(req.body);
+  const data = createWordSchema.parse(req.body)
 
   return await prisma.word.create({
     data,

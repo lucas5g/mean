@@ -14,7 +14,7 @@ describe('Test (E2e)', () => {
   it('find one', async () => {
     const res = await request(api).get('/api/1');
 
-    ['id', 'name', 'meaning'].forEach((property) => {
+    ['id', 'name', 'meaning', 'fixed'].forEach((property) => {
       expect(res.body).toHaveProperty(property);
     });
   });
