@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { api } from './utils/axios';
 import useSWR from 'swr';
+import { api } from './utils/axios';
 interface WordInterface {
   id: string;
   name: string;
@@ -9,14 +9,20 @@ interface WordInterface {
 }
 
 export function App() {
-  const fetch = async (url: string) => {
-    const { data } = await api.get(url);
-    return data;
-  };
-  const { data, error, isLoading, mutate } = useSWR(fetch('api'));
+  const uri =
+    location.host === 'localhost:5173'
+      ? 'http://localhost:8000/api'
+      : 'https://means.vercel.app/api';
+
+  const fetcher = (url: string) =>
+    fetch(url).then((res) => {
+      return res.json();
+    });
+
+  const { data, error, mutate } = useSWR(uri, fetcher);
 
   if (error) return <div>Erro ao carregar.</div>;
-  if (isLoading) return <div>Carregando...</div>;
+  if (!data) return <div>Carregando...</div>;
 
   const words: WordInterface[] = data;
 
