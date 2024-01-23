@@ -1,10 +1,24 @@
 import fastify from 'fastify';
-import { z } from 'zod';
 import cors from '@fastify/cors';
-import { createWordSchema, paramsSchema, updateWordSchema } from './schemas.js';
-import { prisma } from './prisma.js';
+import { z } from 'zod';
+import { PrismaClient } from '@prisma/client';
 
-export const app = fastify();
+const prisma = new PrismaClient();
+
+const app = fastify();
+
+const createWordSchema = z.object({
+  name: z.string(),
+  meaning: z.string(),
+  fixed: z.boolean(),
+});
+
+const updateWordSchema = createWordSchema.partial();
+
+const paramsSchema = z.object({
+  id: z.coerce.number(),
+});
+
 app.register(cors);
 
 app.get('/api', async () => {
@@ -21,7 +35,6 @@ app.get('/api', async () => {
 });
 
 app.get('/api/:id', async (req) => {
-
   const { id } = paramsSchema.parse(req.params);
 
   return await prisma.word.findFirst({
@@ -30,10 +43,9 @@ app.get('/api/:id', async (req) => {
 });
 
 app.patch('/api/:id', async (req) => {
-
   const { id } = paramsSchema.parse(req.params);
 
-  const data = updateWordSchema.parse(req.body)
+  const data = updateWordSchema.parse(req.body);
 
   return await prisma.word.update({
     where: { id },
@@ -42,7 +54,7 @@ app.patch('/api/:id', async (req) => {
 });
 
 app.post('/api', async (req) => {
-  const data = createWordSchema.parse(req.body)
+  const data = createWordSchema.parse(req.body);
 
   return await prisma.word.create({
     data,
@@ -50,7 +62,6 @@ app.post('/api', async (req) => {
 });
 
 app.delete('/api/:id', async (req, res) => {
-  
   const { id } = paramsSchema.parse(req.params);
 
   res.status(204).send(
@@ -71,7 +82,7 @@ app
   })
   .then(() => console.log('http://localhost:8000/api'));
 
-export default async (req, res) => {
+export default async (req: Request, res: Response) => {
   await app.ready();
   app.server.emit('request', req, res);
 };
