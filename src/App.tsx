@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import useSWR from 'swr';
 import { api } from './utils/axios';
+import { useState } from 'react';
+import { searchText } from './utils/search-text';
 interface WordInterface {
   id: string;
   name: string;
@@ -9,6 +11,7 @@ interface WordInterface {
 }
 
 export function App() {
+  const [search, setSearch] = useState<string>('');
   const { data, error, mutate } = useSWR('api', async () => {
     return (await api.get('api')).data;
   });
@@ -16,27 +19,16 @@ export function App() {
   if (error) return <div>Erro ao carregar.</div>;
   if (!data) return <div>Carregando...</div>;
 
-  const words: WordInterface[] = data;
+  const words: WordInterface[] = data.filter((word: WordInterface) => {
+    return searchText(word.name).includes(search);
+  });
 
   return (
     <main className="min-h-screen p-10 space-y-8 text-white bg-gray-800">
       <input
         placeholder="Type words"
         className="w-full p-5 font-semibold text-white bg-gray-600 border rounded-xl placeholder:text-white"
-        // onChange={(event) => {
-        //   const filter = event.target.value
-        //     .toLowerCase()
-        //     .normalize('NFD')
-        //     .replace(/[\u0300-\u036f]/g, '');
-
-        //   words.filter((word) => {
-        //     const wordFormat = word.name
-        //       .normalize('NFD')
-        //       .replace(/[\u0300-\u036f]/g, '');
-
-        //     return wordFormat.includes(filter);
-        //   });
-        // }}
+        onChange={(event) => setSearch(searchText(event.target.value))}
       />
 
       <ul
