@@ -5,6 +5,7 @@ import words from './data.json';
 
 async function main() {
   for (const word of words) {
+    word.name = word.name.toLowerCase();
     await prisma.word.upsert({
       where: { name: word.name },
       update: word,
