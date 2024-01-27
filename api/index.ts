@@ -25,9 +25,6 @@ app.get('/api', async () => {
   return await prisma.word.findMany({
     orderBy: [
       {
-        fixed: 'desc',
-      },
-      {
         name: 'asc',
       },
     ],

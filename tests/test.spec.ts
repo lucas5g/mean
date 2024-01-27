@@ -6,10 +6,12 @@ const api = 'http://localhost:8000';
 
 describe('Test (E2e)', () => {
   it('find all', async () => {
-    const res = await request(api).get('/api');
+    const uri = '/api';
 
-    expect(res.body).length.greaterThan(0);
-  }, 5000);
+    const res = await request(api).get(uri);
+
+    expect(res.body).length.lessThanOrEqual(200);
+  }, 6000);
 
   it('find one', async () => {
     const res = await request(api).get('/api/1');

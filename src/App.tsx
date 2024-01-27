@@ -12,8 +12,9 @@ interface WordInterface {
 
 export function App() {
   const [search, setSearch] = useState<string>('');
-  const { data, error, mutate } = useSWR('api', async () => {
-    return (await api.get('api')).data;
+  const uri = 'api';
+  const { data, error, mutate } = useSWR(uri, async () => {
+    return (await api.get(uri)).data;
   });
 
   if (error) return <div>Erro ao carregar.</div>;
@@ -37,7 +38,7 @@ export function App() {
           'grid-cols-2 lg:grid-cols-2': words.length === 2,
         })}
       >
-        {words.map((word) => {
+        {words.slice(0, 20).map((word) => {
           return (
             <li
               key={word.id}

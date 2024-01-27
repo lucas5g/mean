@@ -1,3 +1,5 @@
 1 - auto import single cotas
 2 - words fixed front/back
 3 - automate line breaking
+4 - ajustar a api para retornar 100
+5 - adicionar coluna do livro
