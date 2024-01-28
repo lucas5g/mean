@@ -13,6 +13,14 @@ describe('Test (E2e)', () => {
     expect(res.body).length.lessThanOrEqual(200);
   }, 6000);
 
+  it('find all with params take', async () => {
+    const uri = '/api?take=200';
+
+    const res = await request(api).get(uri);
+
+    expect(res.body.length).greaterThan(100);
+  });
+
   it('find one', async () => {
     const res = await request(api).get('/api/1');
 

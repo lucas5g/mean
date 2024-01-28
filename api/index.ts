@@ -21,13 +21,18 @@ const paramsSchema = z.object({
 
 app.register(cors);
 
-app.get('/api', async () => {
+app.get('/api', async (req) => {
+  const { take } = z
+    .object({
+      take: z.coerce.number().optional().default(100),
+    })
+    .parse(req.query);
+
   return await prisma.word.findMany({
-    orderBy: [
-      {
-        name: 'asc',
-      },
-    ],
+    orderBy: {
+      name: 'asc',
+    },
+    take,
   });
 });
 
