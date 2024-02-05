@@ -10,6 +10,8 @@ describe('Test (E2e)', () => {
 
     const res = await request(api).get(uri);
 
+    console.log(res.body);
+
     expect(res.status).equal(200);
     res.body.forEach((book: { name: string }) => {
       expect(book).toHaveProperty('id');

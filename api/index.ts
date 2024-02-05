@@ -30,9 +30,9 @@ app.get('/api/books', async () => {
     },
   });
 
-  return books.map((book) => {
+  return books.map((book, i) => {
     return {
-      id: new Date().valueOf(),
+      id: ++i,
       name: book.book,
     };
   });
