@@ -22,6 +22,22 @@ const paramsSchema = z.object({
 
 app.register(cors);
 
+app.get('/api/books', async () => {
+  const books = await prisma.word.findMany({
+    distinct: 'book',
+    select: {
+      book: true,
+    },
+  });
+
+  return books.map((book) => {
+    return {
+      id: new Date().valueOf(),
+      name: book.book,
+    };
+  });
+});
+
 app.get('/api', async (req) => {
   const { take } = z
     .object({
