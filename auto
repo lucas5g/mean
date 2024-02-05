@@ -2,6 +2,13 @@
 
 message=$1
 
+npm test
+status=$?
+if [ "$status" != 0 ]; then 
+  echo -e "Erro no test"
+  exit $status
+fi
+
 npm run lint 
 status=$?
 if [ "$status" != 0 ]; then 
@@ -13,13 +20,6 @@ npm run build
 status=$?
 if [ "$status" != 0 ]; then 
   echo -e "Erro no build"
-  exit $status
-fi
-
-npm test
-status=$?
-if [ "$status" != 0 ]; then 
-  echo -e "Erro no test"
   exit $status
 fi
 

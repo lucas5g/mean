@@ -2,6 +2,7 @@ import fastify from 'fastify';
 import cors from '@fastify/cors';
 import { z } from 'zod';
 import { PrismaClient } from '@prisma/client';
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 
 const prisma = new PrismaClient();
 
@@ -74,7 +75,13 @@ app.delete('/api/:id', async (req, res) => {
 });
 
 app.setErrorHandler((error, req, res) => {
-  console.log(error);
+  error instanceof PrismaClientKnownRequestError;
+
+  if (error.code === 'P2002') {
+    res.status(401).send({ message: 'Palavra já foi registrada.' });
+  }
+
+  // console.log(error);
   res.status(500).send({ msg: 'algum erro' });
 });
 
