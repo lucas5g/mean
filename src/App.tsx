@@ -1,9 +1,9 @@
-import clsx from 'clsx';
 import useSWR from 'swr';
 import { api } from './utils/axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { searchText } from './utils/search-text';
 import { List } from './components/List';
+import { Loader2 } from 'lucide-react';
 export interface WordInterface {
   id: string;
   name: string;
@@ -13,17 +13,23 @@ export interface WordInterface {
 
 export function App() {
   const [search, setSearch] = useState<string>('');
+  const [words, setWords] = useState<WordInterface[]>([]);
   const uri = 'api';
-  const { data, error } = useSWR(uri, async () => {
+  const { data, error, isLoading } = useSWR(uri, async () => {
     return (await api.get(uri)).data;
   });
 
-  if (error) return <div>Erro ao carregar.</div>;
-  if (!data) return <div>Carregando...</div>;
+  useEffect(() => {
+    if (!data) return;
 
-  const words: WordInterface[] = data.filter((word: WordInterface) => {
-    return searchText(word.name).includes(search);
-  });
+    const wordsList = data.filter((word: WordInterface) => {
+      return searchText(word.name).includes(search);
+    });
+
+    setWords(wordsList);
+  }, [data, search]);
+
+  if (error) return <div>Erro ao carregar.</div>;
 
   return (
     <main className="min-h-screen p-10 space-y-8 text-white bg-gray-800">
@@ -33,9 +39,14 @@ export function App() {
         onChange={(event) => setSearch(searchText(event.target.value))}
       />
 
-      <List words={words.filter(word => word.fixed)} />
-      <List words={words.filter(word => !word.fixed)} />
+      {isLoading && (
+        <div className="flex items-center justify-center h-[80vh]">
+          <Loader2 size={100} className="animate-spin" />
+        </div>
+      )}
 
+      <List words={words} setWords={setWords} fixed />
+      <List words={words} setWords={setWords} />
     </main>
   );
 }

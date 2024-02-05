@@ -15,6 +15,7 @@ model Word {
   name      String   @unique
   meaning   String
   fixed     Boolean  @default(false)
+  book      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 }

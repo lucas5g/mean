@@ -1,286 +1,902 @@
 [
   {
-    "name": "agastado",
-    "meaning": "Que está desgastado, aborrecido ou irritado.",
-    "fixed": false
+    "id": 240,
+    "name": "abaritonado",
+    "meaning": "Que possui um tom de voz semelhante ao de um barítono.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:37:28.402Z"
   },
   {
-    "name": "corando",
-    "meaning": "Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção.",
-    "fixed": false
+    "id": 51,
+    "name": "abatatado",
+    "meaning": "Que tem a forma ou a aparência de uma batata; achatado.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:54.128Z",
+    "updatedAt": "2024-02-05T13:37:27.842Z"
   },
   {
+    "id": 252,
+    "name": "acabrunhamento",
+    "meaning": "Sentimento de desânimo, tristeza profunda.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:03.676Z",
+    "updatedAt": "2024-02-05T13:36:23.040Z"
+  },
+  {
+    "id": 40,
+    "name": "acetado",
+    "meaning": "Que foi tratado ou impregnado com acetato ou uma substância acetosa; também pode se referir a algo que foi aceito ou concordado.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:52.523Z",
+    "updatedAt": "2024-02-05T13:37:27.393Z"
+  },
+  {
+    "id": 392,
+    "name": "acossado",
+    "meaning": "Perseguido, atormentado; afligido por dificuldades ou problemas.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:50.307Z",
+    "updatedAt": "2024-02-02T20:02:50.307Z"
+  },
+  {
+    "id": 213,
+    "name": "adunca",
+    "meaning": "Que é curvado, arqueado ou possui forma de gancho.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:37:30.762Z"
+  },
+  {
+    "id": 108,
+    "name": "adágio",
+    "meaning": "Termo musical que significa \"lentamente\"; também pode se referir a uma expressão ou provérbio.",
+    "fixed": true,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:57.626Z",
+    "updatedAt": "2024-02-05T13:37:58.987Z"
+  },
+  {
+    "id": 3,
     "name": "afroditeu",
     "meaning": "Referente a Afrodite, a deusa grega do amor e da beleza.",
-    "fixed": false
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:46.961Z",
+    "updatedAt": "2024-02-05T13:37:28.962Z"
   },
   {
-    "name": "sândalo",
-    "meaning": "Uma madeira aromática, muitas vezes usada na produção de perfumes e incensos.",
-    "fixed": false
+    "id": 1,
+    "name": "agastado",
+    "meaning": "Que está desgastado, aborrecido ou irritado.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:46.116Z",
+    "updatedAt": "2024-02-05T13:37:25.625Z"
   },
   {
-    "name": "cânfora",
-    "meaning": "Substância cristalina branca com odor característico, extraída de algumas árvores e usada em produtos medicinais e perfumes.",
-    "fixed": false
+    "id": 59,
+    "name": "alarido",
+    "meaning": "Gritaria, clamor; barulho intenso e confuso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:55.291Z",
+    "updatedAt": "2024-02-05T13:37:30.283Z"
   },
   {
-    "name": "tomilho",
-    "meaning": "Planta herbácea, aromática e condimentar, frequentemente utilizada na culinária.",
-    "fixed": false
+    "id": 215,
+    "name": "alheamento",
+    "meaning": "Ato ou efeito de se alhear, de se desinteressar; desligamento emocional ou indiferença.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:37:26.103Z"
   },
   {
-    "name": "languidez",
-    "meaning": "Estado de fraqueza, fadiga ou falta de energia; também pode se referir a uma expressão de suavidade e ternura.",
-    "fixed": false
-  },
-  {
-    "name": "anelantes",
-    "meaning": "Que anseia ou deseja ardentemente.",
-    "fixed": false
-  },
-  {
-    "name": "estereocópicas",
-    "meaning": "Relativo a imagens ou visão estereoscópica, que cria a ilusão de profundidade tridimensional.",
-    "fixed": false
-  },
-  {
+    "id": 10,
     "name": "almíscar",
     "meaning": "Substância odorífera, geralmente extraída de glândulas de animais, usada em perfumaria.",
-    "fixed": false
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:47.992Z",
+    "updatedAt": "2024-01-24T00:41:16.722Z"
   },
   {
+    "id": 16,
+    "name": "ancas",
+    "meaning": "A parte traseira e larga de um animal, especialmente a região das ancas em um quadrúpede.",
+    "fixed": true,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:49.016Z",
+    "updatedAt": "2024-02-05T13:37:40.218Z"
+  },
+  {
+    "id": 8,
+    "name": "anelantes",
+    "meaning": "Que anseia ou deseja ardentemente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:47.697Z",
+    "updatedAt": "2024-01-24T00:41:10.142Z"
+  },
+  {
+    "id": 254,
+    "name": "aquiesceu",
+    "meaning": "Consentiu, concordou.",
+    "fixed": true,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:03.676Z",
+    "updatedAt": "2024-02-05T13:37:42.026Z"
+  },
+  {
+    "id": 318,
+    "name": "aquiescência",
+    "meaning": "Consentimento, concordância; conformidade sem oposição.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:17:58.556Z",
+    "updatedAt": "2024-01-28T16:17:58.556Z"
+  },
+  {
+    "id": 99,
+    "name": "arauto",
+    "meaning": "Mensageiro ou portador de notícias; anunciador oficial.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:56.302Z",
+    "updatedAt": "2024-01-24T00:41:13.153Z"
+  },
+  {
+    "id": 226,
+    "name": "ardor",
+    "meaning": "Sensação de calor intenso; entusiasmo, paixão.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 376,
+    "name": "arfar",
+    "meaning": "Respirar com dificuldade, geralmente após um esforço físico; ofegar.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-05T13:37:29.498Z"
+  },
+  {
+    "id": 335,
+    "name": "atalhou-o",
+    "meaning": "Interrompeu, cortou o discurso de alguém de forma rápida e incisiva.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:23:41.395Z",
+    "updatedAt": "2024-02-05T13:36:21.512Z"
+  },
+  {
+    "id": 219,
+    "name": "aturdidos",
+    "meaning": "Que estão confusos, perplexos ou desorientados.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 386,
+    "name": "aturdimento",
+    "meaning": "Estado de confusão, perplexidade; estar atordoado.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:50.307Z",
+    "updatedAt": "2024-02-02T20:02:50.307Z"
+  },
+  {
+    "id": 232,
+    "name": "atônita",
+    "meaning": "Que está surpreendida, perplexa ou chocada.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:37:26.618Z"
+  },
+  {
+    "id": 358,
+    "name": "avícula",
+    "meaning": "Relativo a aves; que tem forma de ave.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:03.387Z",
+    "updatedAt": "2024-02-02T20:02:03.387Z"
+  },
+  {
+    "id": 237,
+    "name": "bamboleando",
+    "meaning": "Movendo-se de um lado para o outro de maneira oscilante ou instável.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 389,
+    "name": "belbutina",
+    "meaning": "Substância resinosa amarelada, produzida por algumas plantas; goma-resina.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:50.307Z",
+    "updatedAt": "2024-02-02T20:02:50.307Z"
+  },
+  {
+    "id": 260,
+    "name": "benfazeja",
+    "meaning": "Que faz o bem; benevolente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:58.532Z",
+    "updatedAt": "2024-01-27T19:33:58.532Z"
+  },
+  {
+    "id": 106,
+    "name": "carmesins",
+    "meaning": "De cor escarlate; vermelho intenso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:57.326Z",
+    "updatedAt": "2024-02-05T13:37:24.842Z"
+  },
+  {
+    "id": 48,
+    "name": "carriça",
+    "meaning": "Ave passeriforme, conhecida por seu canto melodioso; toutinegra.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:53.691Z",
+    "updatedAt": "2024-01-24T00:41:16.428Z"
+  },
+  {
+    "id": 360,
+    "name": "cercanias",
+    "meaning": "Região próxima a uma localidade; arredores.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:03.387Z",
+    "updatedAt": "2024-02-02T20:02:03.387Z"
+  },
+  {
+    "id": 363,
+    "name": "charneca",
+    "meaning": "Terreno coberto de matagal, arbustos e vegetação rasteira; lande.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:18.078Z",
+    "updatedAt": "2024-02-02T20:02:18.078Z"
+  },
+  {
+    "id": 357,
+    "name": "cintilavam",
+    "meaning": "Brilhavam com luz intensa e intermitente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:03.387Z",
+    "updatedAt": "2024-02-02T20:02:03.387Z"
+  },
+  {
+    "id": 111,
+    "name": "clarim",
+    "meaning": "Instrumento de sopro, semelhante à trombeta, usado especialmente em fanfarras ou para sinais militares.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:58.060Z",
+    "updatedAt": "2024-01-24T00:41:14.923Z"
+  },
+  {
+    "id": 223,
+    "name": "clarinavam",
+    "meaning": "Verbo que indica a ação de soar ou emitir sons agudos, semelhantes aos de um clarim.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 381,
+    "name": "comicidade",
+    "meaning": "Qualidade ou característica do que é cômico; graça, comicidade.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:43.574Z",
+    "updatedAt": "2024-02-02T20:02:43.574Z"
+  },
+  {
+    "id": 384,
+    "name": "complacente",
+    "meaning": "Que se mostra condescendente, tolerante; indulgente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:43.574Z",
+    "updatedAt": "2024-02-02T20:02:43.574Z"
+  },
+  {
+    "id": 367,
+    "name": "consternação",
+    "meaning": "Grande tristeza, pesar profundo; abatimento.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:18.078Z",
+    "updatedAt": "2024-02-02T20:02:18.078Z"
+  },
+  {
+    "id": 373,
+    "name": "contusão",
+    "meaning": "Lesão causada por um golpe ou impacto, resultando em danos nos tecidos internos sem rompimento da pele; equimose.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 2,
+    "name": "corando",
+    "meaning": "Forma conjugada do verbo \"corar\", que significa ficar vermelho na face devido a constrangimento, vergonha ou emoção.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:46.812Z",
+    "updatedAt": "2024-01-24T00:41:09.189Z"
+  },
+  {
+    "id": 383,
+    "name": "cotovia",
+    "meaning": "Pássaro da família Alaudidae, conhecido pelo seu canto melodioso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:43.574Z",
+    "updatedAt": "2024-02-02T20:02:43.574Z"
+  },
+  {
+    "id": 375,
+    "name": "cotovias",
+    "meaning": "Pássaros da família Alaudidae, conhecidos pelo seu canto melodioso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 228,
+    "name": "countryman",
+    "meaning": "compatriota",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 369,
+    "name": "crepitação",
+    "meaning": "Som ou ruído semelhante ao crepitar; estalido.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:18.078Z",
+    "updatedAt": "2024-02-02T20:02:18.078Z"
+  },
+  {
+    "id": 67,
+    "name": "crocitar",
+    "meaning": "Produzir o som característico do canto ou coaxar de um sapo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:56.466Z",
+    "updatedAt": "2024-01-24T00:41:19.563Z"
+  },
+  {
+    "id": 5,
+    "name": "cânfora",
+    "meaning": "Substância cristalina branca com odor característico, extraída de algumas árvores e usada em produtos medicinais e perfumes.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:47.258Z",
+    "updatedAt": "2024-01-24T00:41:09.688Z"
+  },
+  {
+    "id": 374,
+    "name": "cóccix",
+    "meaning": "Osso localizado na extremidade inferior da coluna vertebral; ossinho.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 98,
+    "name": "cópula",
+    "meaning": "Ato de acasalamento entre animais; relação sexual.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:56.156Z",
+    "updatedAt": "2024-01-24T00:41:13.007Z"
+  },
+  {
+    "id": 61,
+    "name": "defrontam",
+    "meaning": "Estão frente a frente; confrontam-se.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:55.583Z",
+    "updatedAt": "2024-01-24T00:41:18.357Z"
+  },
+  {
+    "id": 44,
+    "name": "desafivelou",
+    "meaning": "Afrouxou ou soltou os fechos ou fivelas de algo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:53.102Z",
+    "updatedAt": "2024-01-24T00:41:15.844Z"
+  },
+  {
+    "id": 216,
+    "name": "desalentadora",
+    "meaning": "Que desanima, desencoraja ou desmotiva.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 366,
+    "name": "desbastar",
+    "meaning": "Eliminar o excesso de material de uma superfície, deixando-a mais lisa ou plana.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:18.078Z",
+    "updatedAt": "2024-02-02T20:02:18.078Z"
+  },
+  {
+    "id": 353,
+    "name": "desdêmona",
+    "meaning": "Personagem da peça \"Otelo\", de Shakespeare, esposa do protagonista.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:01:50.653Z",
+    "updatedAt": "2024-02-02T20:01:50.653Z"
+  },
+  {
+    "id": 220,
+    "name": "desenvolto",
+    "meaning": "Que é natural, espontâneo, solto; que age com facilidade ou desenvoltura.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 394,
+    "name": "desperto",
+    "meaning": "Que está acordado, desperto; alerta.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:50.307Z",
+    "updatedAt": "2024-02-02T20:02:50.307Z"
+  },
+  {
+    "id": 103,
+    "name": "desposar",
+    "meaning": "Casar-se; unir-se em casamento.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:56.881Z",
+    "updatedAt": "2024-01-24T00:41:13.739Z"
+  },
+  {
+    "id": 319,
+    "name": "desposá-la",
+    "meaning": "Casar-se com ela; tornar-se seu esposo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:18:20.378Z",
+    "updatedAt": "2024-01-28T16:18:20.378Z"
+  },
+  {
+    "id": 253,
+    "name": "ditoso",
+    "meaning": "Feliz, afortunado.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:03.676Z",
+    "updatedAt": "2024-01-27T19:33:03.676Z"
+  },
+  {
+    "id": 211,
+    "name": "dolicocéfalos",
+    "meaning": "Pessoas ou animais que possuem uma cabeça alongada em relação à largura.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:36:20.464Z"
+  },
+  {
+    "id": 56,
+    "name": "dormitar",
+    "meaning": "Cair no sono levemente; cochilar.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:54.855Z",
+    "updatedAt": "2024-01-24T00:41:17.615Z"
+  },
+  {
+    "id": 321,
+    "name": "dwells",
+    "meaning": "Habita, reside; permanece por um longo tempo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:19:17.609Z",
+    "updatedAt": "2024-01-28T16:19:17.609Z"
+  },
+  {
+    "id": 107,
+    "name": "efusivamente",
+    "meaning": "De maneira calorosa, expansiva ou demonstrativa.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:57.480Z",
+    "updatedAt": "2024-01-24T00:41:14.323Z"
+  },
+  {
+    "id": 352,
+    "name": "eggshell",
+    "meaning": "Casca de ovo; algo frágil e delicado, como a casca de um ovo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:01:50.653Z",
+    "updatedAt": "2024-02-02T20:01:50.653Z"
+  },
+  {
+    "id": 233,
+    "name": "embrucitado",
+    "meaning": "Que está oculto, escondido ou envolto em mistério.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 332,
+    "name": "engendrou",
+    "meaning": "Gerou, produziu; deu origem a algo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:23:19.532Z",
+    "updatedAt": "2024-01-28T16:23:19.532Z"
+  },
+  {
+    "id": 354,
+    "name": "eremitério",
+    "meaning": "Local habitado por eremitas; eremitério, eremitório.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:01:50.653Z",
+    "updatedAt": "2024-02-02T20:01:50.653Z"
+  },
+  {
+    "id": 11,
     "name": "erógenas",
     "meaning": "Referente a zonas do corpo que são particularmente sensíveis e podem causar excitação sexual quando estimuladas.",
-    "fixed": false
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:48.138Z",
+    "updatedAt": "2024-01-24T00:41:10.668Z"
   },
   {
+    "id": 229,
+    "name": "esgueirado",
+    "meaning": "Que se moveu ou agiu furtivamente; sorrateiro.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 9,
+    "name": "estereocópicas",
+    "meaning": "Relativo a imagens ou visão estereoscópica, que cria a ilusão de profundidade tridimensional.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:47.845Z",
+    "updatedAt": "2024-01-24T00:41:10.295Z"
+  },
+  {
+    "id": 370,
+    "name": "estetoscópio",
+    "meaning": "Instrumento médico utilizado para auscultar os sons internos do corpo, especialmente os do coração e dos pulmões.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 397,
+    "name": "estribilho",
+    "meaning": "Refrão, parte de uma música ou poesia que se repete ao final de cada estrofe.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:56.545Z",
+    "updatedAt": "2024-02-02T20:02:56.545Z"
+  },
+  {
+    "id": 20,
+    "name": "estrugiram",
+    "meaning": "Produziram um som agudo, estridente; ressoaram de maneira estridente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:49.597Z",
+    "updatedAt": "2024-01-24T00:41:12.274Z"
+  },
+  {
+    "id": 224,
+    "name": "estrépito",
+    "meaning": "Som alto e estrondoso; barulho.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 393,
+    "name": "estupor",
+    "meaning": "Estado de inconsciência, insensibilidade; torpor, letargia.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:50.307Z",
+    "updatedAt": "2024-02-02T20:02:50.307Z"
+  },
+  {
+    "id": 42,
+    "name": "exasperada",
+    "meaning": "Que está irritada, enfurecida ou exasperada.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:52.813Z",
+    "updatedAt": "2024-01-24T00:41:15.539Z"
+  },
+  {
+    "id": 231,
+    "name": "exasperado",
+    "meaning": "Que está irritado, enfurecido ou extremamente aborrecido.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 104,
+    "name": "excruciantes",
+    "meaning": "Que causam dor intensa ou sofrimento extremo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:57.029Z",
+    "updatedAt": "2024-01-24T00:41:13.884Z"
+  },
+  {
+    "id": 368,
+    "name": "excusou-se",
+    "meaning": "Pediu desculpas, justificou-se.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:18.078Z",
+    "updatedAt": "2024-02-02T20:02:18.078Z"
+  },
+  {
+    "id": 63,
+    "name": "fealdades",
+    "meaning": "Características ou aspectos feios ou repugnantes; falta de beleza.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:55.878Z",
+    "updatedAt": "2024-01-24T00:41:18.777Z"
+  },
+  {
+    "id": 49,
+    "name": "fetidez",
+    "meaning": "Qualidade de ser fétido; mau cheiro, odor desagradável.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:53.836Z",
+    "updatedAt": "2024-01-24T00:41:16.576Z"
+  },
+  {
+    "id": 225,
+    "name": "fitaram-no",
+    "meaning": "Olharam-no fixamente; encararam-no intensamente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 371,
+    "name": "flagelo",
+    "meaning": "Instrumento de tortura; calamidade, desgraça.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 372,
+    "name": "fornido",
+    "meaning": "Que possui muita força física; robusto, musculoso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:31.125Z",
+    "updatedAt": "2024-02-02T20:02:31.125Z"
+  },
+  {
+    "id": 314,
+    "name": "fortune",
+    "meaning": "Fortuna, riqueza; destino, sorte.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:15:36.688Z",
+    "updatedAt": "2024-01-28T16:15:36.688Z"
+  },
+  {
+    "id": 102,
+    "name": "fremente",
+    "meaning": "Que está tremendo ou agitado; agitado de emoção.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:56.736Z",
+    "updatedAt": "2024-01-24T00:41:13.593Z"
+  },
+  {
+    "id": 100,
+    "name": "funérea",
+    "meaning": "Relativo a funeral; fúnebre.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-24T00:36:56.447Z",
+    "updatedAt": "2024-01-24T00:41:13.299Z"
+  },
+  {
+    "id": 400,
+    "name": "fustigava",
+    "meaning": "Açoitava, chicoteava; castigava com golpes.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:56.545Z",
+    "updatedAt": "2024-02-02T20:02:56.545Z"
+  },
+  {
+    "id": 53,
+    "name": "fúnebres",
+    "meaning": "Relativo a funerais; triste, sombrio.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:54.418Z",
+    "updatedAt": "2024-01-24T00:41:17.165Z"
+  },
+  {
+    "id": 256,
+    "name": "galvanizaram",
+    "meaning": "Estimularam, inspiraram ou provocaram uma reação.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:03.676Z",
+    "updatedAt": "2024-01-27T19:33:03.676Z"
+  },
+  {
+    "id": 12,
     "name": "galvânico",
     "meaning": "Relativo a eletricidade ou corrente elétrica, especialmente corrente contínua produzida por uma pilha ou bateria.",
-    "fixed": false
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:48.284Z",
+    "updatedAt": "2024-01-24T00:41:10.818Z"
   },
   {
+    "id": 218,
+    "name": "gusanos",
+    "meaning": "Plural de \"gusano\", que pode se referir a vermes ou larvas.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 313,
+    "name": "hediondo",
+    "meaning": "Que é horrível, terrível; que provoca horror ou repugnância.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-28T16:15:08.580Z",
+    "updatedAt": "2024-01-28T16:15:08.580Z"
+  },
+  {
+    "id": 255,
+    "name": "hipnopédico",
+    "meaning": "Relativo ao sono, particularmente ao sono induzido por sugestões hipnóticas.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-27T19:33:03.676Z",
+    "updatedAt": "2024-01-27T19:33:03.676Z"
+  },
+  {
+    "id": 214,
+    "name": "hirsuta",
+    "meaning": "Que é coberto de pelos ásperos; peludo.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
+  },
+  {
+    "id": 13,
     "name": "ignominiosamente",
-    "meaning": "De maneira vergonhosa; de forma desonrosa; sem honra."
+    "meaning": "De maneira vergonhosa; de forma desonrosa; sem honra.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:48.429Z",
+    "updatedAt": "2024-01-24T00:41:10.966Z"
   },
   {
-    "name": "resfolegar",
-    "meaning": "Respirar com dificuldade e ruído, especialmente após esforço físico; ofegar."
-  },
-  {
-    "name": "meneando",
-    "meaning": "Movendo-se para frente e para trás; balançando ou agitando."
-  },
-  {
-    "name": "ancas",
-    "meaning": "A parte traseira e larga de um animal, especialmente a região das ancas em um quadrúpede."
-  },
-  {
-    "name": "voluptuosa",
-    "meaning": "Que tem formas atraentes e sensuais; exuberante."
-  },
-  {
-    "name": "pustuloso",
-    "meaning": "Que está coberto ou caracterizado por pústulas; cheio de pústulas."
-  },
-  {
-    "name": "mocassins",
-    "meaning": "Tipo de calçado, geralmente feito de couro macio e flexível, sem salto e com uma sola fina."
-  },
-  {
-    "name": "estrugiram",
-    "meaning": "Produziram um som agudo, estridente; ressoaram de maneira estridente."
-  },
-  {
-    "name": "lívido",
-    "meaning": "Com uma coloração pálida ou acinzentada, muitas vezes associada a doença, medo ou raiva."
-  },
-  {
-    "name": "pustulosa",
-    "meaning": "Forma feminina de \"pustuloso\", que significa coberto de pústulas; cheio de pústulas."
-  },
-  {
-    "name": "peyotl",
-    "meaning": "Uma cactácea psicoativa utilizada tradicionalmente em cerimônias religiosas por certas culturas indígenas, como os Huichol e os Navajo."
-  },
-  {
-    "name": "patchuli",
-    "meaning": "Óleo essencial extraído de uma planta asiática, usado em perfumaria devido ao seu aroma característico."
-  },
-  {
-    "name": "Cópula",
-    "meaning": "Ato de acasalamento entre animais; relação sexual."
-  },
-  {
-    "name": "Arauto",
-    "meaning": "Mensageiro ou portador de notícias; anunciador oficial."
-  },
-  {
-    "name": "Funérea",
-    "meaning": "Relativo a funeral; fúnebre."
-  },
-  {
-    "name": "Mortificação",
-    "meaning": "Ato ou processo de causar sofrimento físico ou emocional como forma de disciplina ou penitência."
-  },
-  {
-    "name": "Fremente",
-    "meaning": "Que está tremendo ou agitado; agitado de emoção."
-  },
-  {
-    "name": "Desposar",
-    "meaning": "Casar-se; unir-se em casamento."
-  },
-  {
-    "name": "Excruciantes",
-    "meaning": "Que causam dor intensa ou sofrimento extremo."
-  },
-  {
-    "name": "Lupo",
-    "meaning": "Afecção inflamatória da pele, especialmente do nariz, de tendência invasora e destrutiva."
-  },
-  {
-    "name": "Carmesins",
-    "meaning": "De cor escarlate; vermelho intenso."
-  },
-  {
-    "name": "Efusivamente",
-    "meaning": "De maneira calorosa, expansiva ou demonstrativa."
-  },
-  {
-    "name": "Adágio",
-    "meaning": "Termo musical que significa \"lentamente\"; também pode se referir a uma expressão ou provérbio."
-  },
-  {
-    "name": "Sucedâneo",
-    "meaning": "Substituto ou imitação, especialmente em relação a alimentos ou medicamentos."
-  },
-  {
-    "name": "Tripanossomíase",
-    "meaning": "Doença parasitária causada por tripanossomas, transmitida principalmente por moscas tsetse."
-  },
-  {
-    "name": "Clarim",
-    "meaning": "Instrumento de sopro, semelhante à trombeta, usado especialmente em fanfarras ou para sinais militares."
-  },
-  {
-    "name": "Objetou",
-    "meaning": "Expressou objeção ou discordância; fez uma objeção."
-  },
-  {
-    "name": "acetado",
-    "meaning": "Que foi tratado ou impregnado com acetato ou uma substância acetosa; também pode se referir a algo que foi aceito ou concordado."
-  },
-  {
-    "name": "píncaro",
-    "meaning": "Cume, ponto mais alto; o ponto culminante ou o ápice de algo."
-  },
-  {
-    "name": "exasperada",
-    "meaning": "Que está irritada, enfurecida ou exasperada."
-  },
-  {
-    "name": "tépidos",
-    "meaning": "Mornos; com temperatura moderada."
-  },
-  {
-    "name": "desafivelou",
-    "meaning": "Afrouxou ou soltou os fechos ou fivelas de algo."
-  },
-  {
-    "name": "róseo",
-    "meaning": "De cor rosa; agradável, otimista."
-  },
-  {
-    "name": "impudente",
-    "meaning": "Que age com falta de respeito ou modéstia; atrevido."
-  },
-  {
-    "name": "inexorável",
-    "meaning": "Que não pode ser persuadido, apaziguado ou alterado; implacável."
-  },
-  {
-    "name": "carriça",
-    "meaning": "Ave passeriforme, conhecida por seu canto melodioso; toutinegra."
-  },
-  {
-    "name": "fetidez",
-    "meaning": "Qualidade de ser fétido; mau cheiro, odor desagradável."
-  },
-  {
-    "name": "almíscar",
-    "meaning": "Substância odorífera, geralmente extraída de glândulas de animais, usada em perfumaria."
-  },
-  {
-    "name": "abatatado",
-    "meaning": "Que tem a forma ou a aparência de uma batata; achatado."
-  },
-  {
-    "name": "tilintou",
-    "meaning": "Produziu um som metálico, semelhante a tilintar ou tintinar."
-  },
-  {
-    "name": "fúnebres",
-    "meaning": "Relativo a funerais; triste, sombrio."
-  },
-  {
-    "name": "têmporas",
-    "meaning": "Região lateral da cabeça, acima da orelha."
-  },
-  {
-    "name": "rubor",
-    "meaning": "Vermelhidão na pele devido a constrangimento, emoção ou febre."
-  },
-  {
-    "name": "dormitar",
-    "meaning": "Cair no sono levemente; cochilar."
-  },
-  {
-    "name": "verbena",
-    "meaning": "Planta herbácea, muitas vezes cultivada por suas flores perfumadas; também pode se referir a produtos feitos a partir dessa planta."
-  },
-  {
-    "name": "vivaz",
-    "meaning": "Que tem vida; animado, cheio de energia."
-  },
-  {
-    "name": "alarido",
-    "meaning": "Gritaria, clamor; barulho intenso e confuso."
-  },
-  {
-    "name": "palrando",
-    "meaning": "Falando ou tagarelando de maneira incessante ou sem sentido."
-  },
-  {
-    "name": "defrontam",
-    "meaning": "Estão frente a frente; confrontam-se."
-  },
-  {
-    "name": "sortilêgio",
-    "meaning": "Encanto mágico ou feitiço; algo que exerce fascínio ou atração irresistível."
-  },
-  {
-    "name": "fealdades",
-    "meaning": "Características ou aspectos feios ou repugnantes; falta de beleza."
-  },
-  {
-    "name": "mescal",
-    "meaning": "Bebida alcoólica feita da fermentação do sumo de certas plantas, como o agave."
-  },
-  {
-    "name": "patchuli",
-    "meaning": "Óleo essencial extraído de uma planta asiática, usado em perfumaria devido ao seu aroma característico."
-  },
-  {
+    "id": 66,
     "name": "ignóbeis",
-    "meaning": "Que é desprezível, vergonhoso; desonroso."
+    "meaning": "Que é desprezível, vergonhoso; desonroso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:56.318Z",
+    "updatedAt": "2024-01-24T00:41:19.414Z"
   },
   {
-    "name": "crocitar",
-    "meaning": "Produzir o som característico do canto ou coaxar de um sapo."
+    "id": 222,
+    "name": "ignóbil",
+    "meaning": "Que é desprezível, vergonhoso; desonroso.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-01-25T23:14:59.762Z"
   },
   {
-    "name": "alarido",
-    "meaning": "Gritaria, clamor; barulho intenso e confuso."
+    "id": 46,
+    "name": "impudente",
+    "meaning": "Que age com falta de respeito ou modéstia; atrevido.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:53.402Z",
+    "updatedAt": "2024-01-24T00:41:16.137Z"
+  },
+  {
+    "id": 399,
+    "name": "indelévil",
+    "meaning": "Que não se pode apagar, eliminar; indelével.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-02-02T20:02:56.545Z",
+    "updatedAt": "2024-02-02T20:02:56.545Z"
+  },
+  {
+    "id": 47,
+    "name": "inexorável",
+    "meaning": "Que não pode ser persuadido, apaziguado ou alterado; implacável.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-23T23:28:53.546Z",
+    "updatedAt": "2024-01-24T00:41:16.282Z"
+  },
+  {
+    "id": 242,
+    "name": "irrequieto",
+    "meaning": "Que está inquieto, agitado ou impaciente.",
+    "fixed": false,
+    "book":"Aldous Huxley - Admirável mundo novo",
+    "createdAt": "2024-01-25T23:14:59.762Z",
+    "updatedAt": "2024-02-05T13:21:21.043Z"
   }
 ]
