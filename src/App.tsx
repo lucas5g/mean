@@ -3,7 +3,8 @@ import useSWR from 'swr';
 import { api } from './utils/axios';
 import { useState } from 'react';
 import { searchText } from './utils/search-text';
-interface WordInterface {
+import { List } from './components/List';
+export interface WordInterface {
   id: string;
   name: string;
   meaning: string;
@@ -13,7 +14,7 @@ interface WordInterface {
 export function App() {
   const [search, setSearch] = useState<string>('');
   const uri = 'api';
-  const { data, error, mutate } = useSWR(uri, async () => {
+  const { data, error } = useSWR(uri, async () => {
     return (await api.get(uri)).data;
   });
 
@@ -32,39 +33,9 @@ export function App() {
         onChange={(event) => setSearch(searchText(event.target.value))}
       />
 
-      <ul
-        className={clsx('grid grid-cols-3 lg:grid-cols-5 gap-5', {
-          'grid-cols-1': words.length === 1,
-          'grid-cols-2 lg:grid-cols-2': words.length === 2,
-        })}
-      >
-        {words.slice(0, 20).map((word) => {
-          return (
-            <li
-              key={word.id}
-              className={clsx('p-2 border rounded-xl hover:cursor-pointer ', {
-                'bg-gray-600': word.fixed,
-              })}
-              onClick={async () => {
-                await api.patch('api/'.concat(word.id), {
-                  fixed: !word.fixed,
-                });
+      <List words={words.filter(word => word.fixed)} />
+      <List words={words.filter(word => !word.fixed)} />
 
-                const updateWords = words.map((row) => {
-                  if (row.id === word.id) {
-                    row.fixed = !row.fixed;
-                  }
-                  return row;
-                });
-                mutate(updateWords);
-              }}
-            >
-              <strong className="pr-2">{word.name.toUpperCase()}</strong>
-              <div>{word.meaning}</div>
-            </li>
-          );
-        })}
-      </ul>
     </main>
   );
 }
