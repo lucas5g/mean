@@ -15,7 +15,7 @@ export interface WordInterface {
 export function App() {
   const [search, setSearch] = useState<string>('');
   const [words, setWords] = useState<WordInterface[]>([]);
-  const uri = 'api';
+  const uri = 'words';
   const { data, error, isLoading } = useSWR(uri, async () => {
     return (await api.get(uri)).data;
   });
