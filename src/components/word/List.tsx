@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { WordInterface } from '../App';
-import { api } from '../utils/axios';
+import { WordInterface } from '../../App';
+import { api } from '../../utils/axios';
 import { Dispatch, SetStateAction } from 'react';
 
 interface Props {
@@ -27,7 +27,7 @@ export function List({ words, setWords, fixed = false }: Props) {
                 'hover:bg-gray-900': !word.fixed,
               })}
               onClick={async () => {
-                await api.patch('words/'.concat(word.id), {
+                api.patch('words/'.concat(word.id), {
                   fixed: !word.fixed,
                 });
 

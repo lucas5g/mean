@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import { api } from './utils/axios';
 import { useEffect, useState } from 'react';
 import { searchText } from './utils/search-text';
-import { List } from './components/List';
+import { List } from './components/word/List';
 import { Loader2, X } from 'lucide-react';
 import clsx from 'clsx';
 export interface WordInterface {
@@ -15,6 +15,7 @@ export interface WordInterface {
 export function App() {
   const [search, setSearch] = useState<string>('');
   const [words, setWords] = useState<WordInterface[]>([]);
+  
   const uri = 'words';
   const { data, error, isLoading } = useSWR(uri, async () => {
     return (await api.get(uri)).data;
@@ -33,8 +34,11 @@ export function App() {
   if (error) return <div>Erro ao carregar.</div>;
 
   return (
-    <main className="min-h-screen lg:p-20 p-10 space-y-6 text-white bg-gray-800">
-      <div className="flex items-center relative justify-end">
+    <main className="min-h-screen p-10 space-y-6 text-white bg-gray-800 lg:p-20">
+      <ul>
+        <li></li>
+      </ul>
+      <div className="relative flex items-center justify-end">
         <input
           placeholder="Type word"
           className="w-full p-5 font-semibold text-white bg-gray-600 border rounded-xl placeholder:text-white"
