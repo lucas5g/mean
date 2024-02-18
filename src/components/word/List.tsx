@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import { WordInterface } from '../../App';
 import { api } from '../../utils/axios';
 import { Dispatch, SetStateAction } from 'react';
+import { WordInterface } from '../../pages/Word';
 
 interface Props {
   words: WordInterface[];

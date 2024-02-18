@@ -11,10 +11,11 @@ import { Form } from "../components/word/Form";
 
 
 export interface WordInterface {
-  id: string;
+  id: number;
   name: string;
   meaning: string;
   fixed: boolean;
+  bookId: number
 }
 
 export function Word() {
@@ -26,11 +27,16 @@ export function Word() {
     return (await api.get(uri)).data;
   });
 
+  const { data: books } = useSWR('books', async() => {
+    const {data} = await api.get('books')
+    return data     
+  })
+  
   useEffect(() => {
     if (!data) return
     setWords(data)
   }, [data])
-  if (isLoading) return <Loading />
+  if (isLoading || !books) return <Loading />
   if (error) return <h1>error</h1>
   return (
     <Layout>
@@ -60,7 +66,9 @@ export function Word() {
       />
 
       <Form
+        words={words}
         setWords={setWords}
+        books={books}
       />
     </Layout>
   )

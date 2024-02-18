@@ -5,27 +5,28 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose
-} from "@/components/ui/dialog"
+} from '../ui/dialog'
 import { Plus } from "lucide-react"
 import { Dispatch, FormEvent, SetStateAction, useState } from "react"
+import { WordInterface } from '../../pages/Word';
+import { api } from '../../utils/axios';
+import { BookInterface } from '../../pages/Book';
 
 
 interface Props {
-  books: {
-    id: number
-    name: string
-  }[]
-  setWords: Dispatch<SetStateAction<WordInterface[]>>;
+  words: WordInterface[]
+  setWords: Dispatch<SetStateAction<WordInterface[]>>
+  books: BookInterface[]
 }
 
-export function Form({ books }: Props) {
+export function Form({ words, setWords, books }: Props) {
 
   const [open, setOpen] = useState(false);
+  const [word, setWord] = useState({} as WordInterface)
 
-  const { setWords, words, word, setWord } = useWordContext()
 
+  
   async function handleSubmit(event: FormEvent) {
-
 
     event.preventDefault()
     word.fixed = false
@@ -40,16 +41,13 @@ export function Form({ books }: Props) {
 
       })
 
-    axios.get('/api/cache?revalidate=books')
-
-
     const newListWords = [...words, {
       ...word,
       id: new Date().valueOf()
     }]
 
     setWords(newListWords)
-    
+
     setWord({} as WordInterface)
 
     setOpen(false)
@@ -60,9 +58,9 @@ export function Form({ books }: Props) {
       <DialogTrigger className="fixed p-3 bg-gray-500 rounded-full bottom-7 right-5 hover:bg-gray-400" >
         <Plus size={25} />
       </DialogTrigger>
-      < DialogContent className="bg-gray-700" >
+      < DialogContent className="text-white bg-gray-700" >
         <DialogHeader>
-          <DialogTitle>Informações da Palavra</DialogTitle>
+          <DialogTitle >Informações da Palavra</DialogTitle>
         </DialogHeader>
         <form
           onSubmit={handleSubmit}
