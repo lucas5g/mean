@@ -27,7 +27,7 @@ export function List({ words, setWords, fixed = false }: Props) {
                 'hover:bg-gray-900': !word.fixed,
               })}
               onClick={async () => {
-                api.patch('words/'.concat(word.id), {
+                api.patch(`words/${word.id}`, {
                   fixed: !word.fixed,
                 });
 

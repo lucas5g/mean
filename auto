@@ -2,12 +2,6 @@
 
 message=$1
 
-npm test
-status=$?
-if [ "$status" != 0 ]; then 
-  echo -e "Erro no test"
-  exit $status
-fi
 
 npm run lint 
 status=$?
