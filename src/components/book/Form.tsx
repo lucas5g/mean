@@ -7,7 +7,6 @@ import {
   DialogTrigger,
   DialogClose
 } from "../../components/ui/dialog"
-import axios from "axios"
 import { Plus } from "lucide-react"
 import { Dispatch, FormEvent, SetStateAction, useState } from "react"
 import { BookInterface } from "../../pages/Book"
@@ -33,8 +32,6 @@ export function Form({ books, setBooks }: Props) {
         alert('Erro ao cadastrar o livro')
         location.reload()
       })
-
-    axios.get('/api/cache?revalidate=books')
 
     setBooks([
       ...books, {

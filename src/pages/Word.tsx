@@ -34,8 +34,13 @@ export function Word() {
   
   useEffect(() => {
     if (!data) return
-    setWords(data)
-  }, [data])
+
+    const wordsList = data.filter((word: WordInterface) => {
+      return searchText(word.name).includes(search);
+    });
+    
+    setWords(wordsList)
+  }, [data,search])
   if (isLoading || !books) return <Loading />
   if (error) return <h1>error</h1>
   return (
