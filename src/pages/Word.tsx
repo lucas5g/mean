@@ -1,13 +1,14 @@
 import useSWR from 'swr';
 import { Layout } from '../components/Layout';
 import { api } from '../utils/axios';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import clsx from 'clsx';
 import { searchText } from '../utils/search-text';
 import { Loading } from './Loading';
 import { List } from '../components/word/List';
 import { Form } from '../components/word/Form';
+import { setTimeout } from 'timers/promises';
 
 export interface WordInterface {
   id: number;
@@ -19,10 +20,11 @@ export interface WordInterface {
 
 export function Word() {
   const [search, setSearch] = useState('');
+  const [uri, setUri] = useState('words')
   const [words, setWords] = useState([] as WordInterface[]);
 
-  const uri = 'words';
   const { data, error, isLoading } = useSWR(uri, async () => {
+    // await setTimeout(4000)
     return (await api.get(uri)).data;
   });
 
@@ -33,14 +35,24 @@ export function Word() {
 
   useEffect(() => {
     if (!data) return;
-
-    const wordsList = data.filter((word: WordInterface) => {
+    
+    
+    const wordsList = data.words.filter((word: WordInterface) => {
       return searchText(word.name).includes(search);
     });
 
     setWords(wordsList);
+    if (wordsList.length === 0 && data.count > 0) {
+      setUri(`words?name=${search}`)
+    }
+
+    if(search.length === 0){
+      setUri('words')
+    }
+
+
   }, [data, search]);
-  if (isLoading || !books) return <Loading />;
+  // if (isLoading || !books) return <Loading />;
   if (error) return <h1>error</h1>;
   return (
     <Layout>
@@ -55,14 +67,22 @@ export function Word() {
           className={clsx('absolute mr-5 size-8 hover:cursor-pointer', {
             hidden: search.length === 0,
           })}
-          onClick={() => setSearch('')}
+          onClick={() => {
+            setSearch('') 
+          }}
         />
       </div>
-      <List words={words} setWords={setWords} fixed />
 
-      <List words={words} setWords={setWords} />
+      {isLoading && <Loading />}
+      {data &&
+        <>
+          <List words={words} setWords={setWords} fixed />
 
-      <Form words={words} setWords={setWords} books={books} />
+          <List words={words} setWords={setWords} />
+          <Form words={words} setWords={setWords} books={books} />
+        </>
+      }
+
     </Layout>
   );
 }

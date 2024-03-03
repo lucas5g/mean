@@ -86,7 +86,7 @@ export function Form({ words, setWords, books }: Props) {
             required
           >
             <option value="">Livros</option>
-            {books.map((book) => {
+            {books?.map((book) => {
               return (
                 <option
                   key={book.id}
