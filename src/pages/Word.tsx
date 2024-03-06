@@ -35,18 +35,18 @@ export function Word() {
 
   useEffect(() => {
     if (!data) return;
-    
-    
+
+
     const wordsList = data.words.filter((word: WordInterface) => {
       return searchText(word.name).includes(search);
     });
 
     setWords(wordsList);
-    if (wordsList.length === 0 && data.count > 0) {
+    if (wordsList.length === 0) {
       setUri(`words?name=${search}`)
     }
 
-    if(search.length === 0){
+    if (search.length === 0) {
       setUri('words')
     }
 
@@ -68,7 +68,7 @@ export function Word() {
             hidden: search.length === 0,
           })}
           onClick={() => {
-            setSearch('') 
+            setSearch('')
           }}
         />
       </div>
@@ -81,6 +81,13 @@ export function Word() {
           <List words={words} setWords={setWords} />
           <Form words={words} setWords={setWords} books={books} />
         </>
+      }
+
+      {data && words.length === 0 &&
+        <h1 className='text-gray-300'>
+
+          Nada encontrado :(
+        </h1>
       }
 
     </Layout>
