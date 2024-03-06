@@ -1,14 +1,13 @@
 import useSWR from 'swr';
 import { Layout } from '../components/Layout';
 import { api } from '../utils/axios';
-import { Suspense, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import clsx from 'clsx';
 import { searchText } from '../utils/search-text';
 import { Loading } from './Loading';
 import { List } from '../components/word/List';
 import { Form } from '../components/word/Form';
-import { setTimeout } from 'timers/promises';
 
 export interface WordInterface {
   id: number;
