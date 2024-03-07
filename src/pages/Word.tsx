@@ -20,7 +20,7 @@ export interface WordInterface {
 
 export function Word() {
   const [search, setSearch] = useState('');
-  const [uri, setUri] = useState('words')
+  const [, setUri] = useState('words')
   const [words, setWords] = useState([] as WordInterface[]);
 
   const { data, error, isLoading } = useFetch('words')
