@@ -1,9 +1,8 @@
-import useSWR from 'swr';
 import { Layout } from '../components/Layout';
-import { api } from '../utils/axios';
 import { Loading } from './Loading';
 import { Form } from '../components/book/Form';
 import { useEffect, useState } from 'react';
+import { useFetch } from '../utils/use-Fetch';
 
 export interface BookInterface {
   id: number;
@@ -13,13 +12,16 @@ export interface BookInterface {
   };
 }
 
+const fields = {
+  name: 'Nome',
+  words: 'Palavras'
+}
+
+
 export function Book() {
   const [books, setBooks] = useState([] as BookInterface[]);
 
-  const { data, isLoading, error } = useSWR('books', async () => {
-    const { data } = await api.get('books');
-    return data;
-  });
+  const { data, isLoading, error } = useFetch('books')
 
   useEffect(() => {
     setBooks(data);

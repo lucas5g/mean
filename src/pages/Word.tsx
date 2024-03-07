@@ -8,6 +8,7 @@ import { searchText } from '../utils/search-text';
 import { Loading } from './Loading';
 import { List } from '../components/word/List';
 import { Form } from '../components/word/Form';
+import { useFetch } from '../utils/use-Fetch';
 
 export interface WordInterface {
   id: number;
@@ -22,15 +23,9 @@ export function Word() {
   const [uri, setUri] = useState('words')
   const [words, setWords] = useState([] as WordInterface[]);
 
-  const { data, error, isLoading } = useSWR(uri, async () => {
-    // await setTimeout(4000)
-    return (await api.get(uri)).data;
-  });
+  const { data, error, isLoading } = useFetch('words')
 
-  const { data: books } = useSWR('books', async () => {
-    const { data } = await api.get('books');
-    return data;
-  });
+  const { data: books } = useFetch('books')
 
   useEffect(() => {
     if (!data) return;
@@ -51,7 +46,7 @@ export function Word() {
 
 
   }, [data, search]);
-  // if (isLoading || !books) return <Loading />;
+
   if (error) return <h1>error</h1>;
   return (
     <Layout>
