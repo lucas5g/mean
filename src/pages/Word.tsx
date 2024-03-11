@@ -1,6 +1,4 @@
-import useSWR from 'swr';
 import { Layout } from '../components/Layout';
-import { api } from '../utils/axios';
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import clsx from 'clsx';

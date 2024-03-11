@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
-interface Props{
-  fields:Object,
+interface Props {
+  fields: Object,
   children: ReactNode
 }
-export function List({fields, children }:Props){
+export function List({ fields, children }: Props) {
   return (
     <table className="flex justify-center">
       <thead className="text-left">
@@ -18,6 +18,9 @@ export function List({fields, children }:Props){
           })}
         </tr>
       </thead>
+      <tbody>
+        {children}
+      </tbody>
     </table>
   )
 }

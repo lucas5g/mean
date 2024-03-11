@@ -12,10 +12,10 @@ export interface BookInterface {
   };
 }
 
-const fields = {
-  name: 'Nome',
-  words: 'Palavras'
-}
+// const fields = {
+//   name: 'Nome',
+//   words: 'Palavras'
+// }
 
 
 export function Book() {
