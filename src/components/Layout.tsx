@@ -6,9 +6,9 @@ interface Props {
 }
 export function Layout({ children }: Props) {
   return (
-    <div className="min-h-screen space-y-6 text-white bg-gray-800">
+    <div className="min-h-screen text-white bg-gray-800">
       <Navbar />
-      <main className="p-10 space-y-6 lg:p-20">{children}</main>
+      <main className="p-10 space-y-3 lg:p-20 lg:pt-16">{children}</main>
     </div>
   );
 }
